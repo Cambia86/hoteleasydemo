@@ -4,14 +4,14 @@ body {
 }
 
 .icon-bar {
-    width: 200px;
+    width: 50px;
     background-color: #555;
 }
 
 .icon-bar a {
     display: block;
     text-align: left;
-    padding: 16px 0px;
+    padding: 8px 0px;
     transition: all 0.3s ease;
     color: white;
     font-size: 2em;
@@ -20,10 +20,15 @@ body {
 
 .icon-bar a:hover {
     background-color: #000;
+    width: 250px;
 }
 
 .active {
     background-color: #4CAF50 !important;
+}
+
+.iconItem{
+    height: 40px;
 }
 
 .iconItem .txtIcon{
@@ -32,7 +37,15 @@ body {
 }
 
 .iconItem .txtSpan{
-    /*float: left;*/
+    float: left;
     font-size: 1em;
+    padding-left: 10px;
+    display: none;
+}
+
+.iconItem:hover .txtSpan{
+    display:inherit;
+}
+.fa.txtIcon{
     padding-left: 10px;
 }
