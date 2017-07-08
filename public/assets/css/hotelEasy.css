@@ -32,3 +32,8 @@
     display: flex;
     flex-direction:column;
 }
+
+.navbar-default{
+    background-color: #66A1D2;
+    border-color: transparent;
+}

@@ -5,7 +5,7 @@ body {
 
 .icon-bar {
     width: 50px;
-    background-color: #555;
+    background-color: #0B5FA5;
 }
 
 .icon-bar a {
@@ -19,7 +19,7 @@ body {
 }
 
 .icon-bar a:hover {
-    background-color: #000;
+    background-color: #043C6B;
     width: 250px;
 }
 
