@@ -2,6 +2,9 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+.nomarginBottom{
+    margin-bottom: 0;
+}
 .noPaddingLeft{
     padding-left: 0px;
 }
@@ -10,6 +13,10 @@
 }
 .paddingTop30{
     padding-top: 30px;
+}
+
+.paddingTop50{
+    padding-top: 50px;
 }
 
 .marginTop10{
@@ -24,6 +31,7 @@
 
 .flexContainer{
     display: flex;
+    width: 100vw;
 }
 .flexMenu{
     flex-shrink:0;
@@ -31,9 +39,21 @@
 .flexPage{
     display: flex;
     flex-direction:column;
+    width: 100vw;
 }
 
 .navbar-default{
     background-color: #66A1D2;
     border-color: transparent;
+}
+
+/*
+.main{
+    width: 100vw;
+}
+*/
+
+.subHeader{
+    color: #0B5FA5;
+    text-shadow:2px 2px 1px rgba(51, 122, 183, 0.23)
 }

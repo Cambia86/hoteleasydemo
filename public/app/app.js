@@ -5,11 +5,19 @@
     'use strict';
 
     angular
-        .module('hotelEasy', ['ui.router','ngMaterial']
+        .module('hotelEasy', ['ui.router','ngMaterial', 'ngMessages']
         )
         .config(configState)
         .constant('appVersion', '1.0.0')
+        .config(function($mdThemingProvider) {
 
+            // Configure a dark theme with primary foreground yellow
+
+            $mdThemingProvider.theme('docs-dark', 'default')
+                .primaryPalette('yellow')
+                .dark();
+
+        });
     configState.$inject = ['$stateProvider', '$urlRouterProvider', 'appVersion'];
 
     function configState($stateProvider, $urlRouterProvider, appVersion) {
@@ -41,7 +49,8 @@
                 url: '/prenotazioni',
                 views: {
                     'main@': {
-                        templateUrl: 'app/views/prenotazioni.html?v=' + appVersion
+                        templateUrl: 'app/views/prenotazioni.html?v=' + appVersion,
+                        controller: 'prenotazioniController'
                     }
                 }
             })

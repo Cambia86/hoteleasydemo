@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="/assets/css/iconBar.css">
     <link rel="stylesheet" href="/assets/css/hotelEasy.css">
 
+    <!--angular material-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
 </head>
 <body ng-app="hotelEasy">
 
@@ -20,20 +23,37 @@
             <img src="assets/img/logo.png" height="46" width="146"/>
         </div>
     </nav>
+
+    <div class="col-md-1  noPaddingLeft noPaddingRigh">
+        <sidebarbutton ></sidebarbutton>
+    </div>
+    <div class="col-md-11  noPaddingLeft noPaddingRigh paddingTop50">
+        <div class="main" ui-view="main"></div>
+    </div>
 </div>
 
+<!--<div class="row nomarginLeftRigth marginTop50">
+
+</div>-->
+<!--
 <div class="flexContainer marginTop50">
     <div class="flexMenu">
         <sidebarbutton></sidebarbutton>
     </div>
-    <div class="flexPage">
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-12 noPaddingLeft noPaddingRigh">
-                <div ui-view="main"></div>
-            </div>
+    <div   class="row nomarginLeftRigth">
+        <div class="col-md-12 noPaddingLeft noPaddingRigh">
+
+           &lt;!&ndash; <div class="main" ui-view="main"></div>&ndash;&gt;
         </div>
     </div>
-</div>
+    &lt;!&ndash;  <div class="flexPage">
+    <div class="row nomarginLeftRigth">
+           <div class="col-md-12 noPaddingLeft noPaddingRigh">
+               <div class="main" ui-view="main"></div>
+           </div>
+       </div>
+    </div>&ndash;&gt;
+</div>-->
 
 
 <!--thirdparts-->
@@ -60,6 +80,7 @@
 <script src="/app/directive/sidebarButton.js"></script>
 <script src="/app/controller/homeController.js"></script>
 <script src="/app/controller/directive/sidebarButtonController.js"></script>
+<script src="/app/controller/prenotazioniController.js"></script>
 
 </body>
 </html>

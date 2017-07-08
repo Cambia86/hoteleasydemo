@@ -1,1 +1,85 @@
-prenotazioni
+<div class="row nomarginLeftRigth">
+
+    <div class="col-md-11 col-md-offset-1 noPaddingLeft noPaddingRigh">
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-12">
+                <h2 class="subHeader">Inserisci una prenotazione</h2>
+            </div>
+        </div>
+
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-4">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Numero Camere</label>
+                    <md-select ng-model="prenotazione.numCamere">
+                        <md-option ng-repeat="rn in roomNumeroCamere" value="{{rn.nu}}">
+                            {{rn.nu}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-4">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Adulti</label>
+                    <md-select ng-model="prenotazione.numAdulti">
+                        <md-option ng-repeat="rn in roomNumberOccupant" value="{{rn.nu}}">
+                            {{rn.nu}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div class="col-md-4">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Bambini</label>
+                    <md-select ng-model="prenotazione.numBambini">
+                        <md-option ng-repeat="rn in roomNumeroBambini" value="{{rn.nu}}">
+                            {{rn.nu}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-4">
+                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
+                    <label>Nome</label>
+                    <input ng-model="prenotazione.nome">
+                </md-input-container>
+            </div>
+
+            <div class="col-md-4">
+                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
+                    <label>Cognome</label>
+                    <input ng-model="prenotazione.cognome">
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-4 noPaddingLeft">
+                <md-input-container>
+                    <label>Dal</label>
+                    <md-datepicker ng-model="prenotazione.startDate"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <div class="col-md-4 noPaddingLeft">
+                <md-input-container>
+                    <label>Al</label>
+                    <md-datepicker ng-model="prenotazione.endDate"></md-datepicker>
+                </md-input-container>
+            </div>
+        </div>
+
+        <div class="row nomarginLeftRigth">
+            <div class=" col-md-2 col-md-offset-6  noPaddingLeft">
+                <md-button ng-click="showSimpleToast()" class="md-raised md-primary pull-right">Inserisci</md-button>
+            </div>
+        </div>
+    </div>
+</div>
