@@ -21,13 +21,23 @@
         </div>
     </nav>
 </div>
-<sidebarbutton></sidebarbutton>
+
+<div class="flexContainer marginTop50">
+    <div class="flexMenu">
+        <sidebarbutton></sidebarbutton>
+    </div>
+    <div class="flexPage">
+        <div class="row nomarginLeftRigth">
+            <div class="col-md-12 noPaddingLeft noPaddingRigh">
+                <div ui-view="main"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!--thirdparts-->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>-->
 <script src="/script/angular.min.js"></script>
-
 
 
 <script type="text/javascript"
@@ -45,10 +55,11 @@
 -->
 
 
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
 <script src="/app/app.js"></script>
 <script src="/app/directive/sidebarButton.js"></script>
+<script src="/app/controller/homeController.js"></script>
+<script src="/app/controller/directive/sidebarButtonController.js"></script>
 
 </body>
 </html>

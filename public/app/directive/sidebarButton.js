@@ -15,7 +15,8 @@
             scope: {
                 quest: '=quest'
             },
-            templateUrl: 'app/views/directive/sidebarButton.html?v=' + appVersion
+            templateUrl: 'app/views/directive/sidebarButton.html?v=' + appVersion,
+            controller:'sidebarButtonController'
         };
     }
 })();
