@@ -1,85 +1,132 @@
 <div class="row nomarginLeftRigth">
 
     <div class="col-md-11 col-md-offset-1 noPaddingLeft noPaddingRigh">
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-12">
-                <h2 class="subHeader">Inserisci una prenotazione</h2>
-            </div>
-        </div>
 
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-4">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Numero Camere</label>
-                    <md-select ng-model="prenotazione.numCamere">
-                        <md-option ng-repeat="rn in roomNumeroCamere" value="{{rn.nu}}">
-                            {{rn.nu}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-        </div>
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom class="whiteBck">
+                <md-tab label="Nuova prenotazione">
+                    <md-content class="md-padding whiteBck">
+                        <div class="row nomarginLeftRigth">
+                            <div class="col-md-12">
+                                <h2 class="subHeader">Inserisci una prenotazione</h2>
+                            </div>
+                        </div>
 
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-4">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Adulti</label>
-                    <md-select ng-model="prenotazione.numAdulti">
-                        <md-option ng-repeat="rn in roomNumberOccupant" value="{{rn.nu}}">
-                            {{rn.nu}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
+                        <div class="row nomarginLeftRigth">
+                            <div class="col-md-4">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Numero Camere</label>
+                                    <md-select ng-model="prenotazione.numCamere">
+                                        <md-option ng-repeat="rn in roomNumeroCamere" value="{{rn.nu}}">
+                                            {{rn.nu}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
 
-            <div class="col-md-4">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Bambini</label>
-                    <md-select ng-model="prenotazione.numBambini">
-                        <md-option ng-repeat="rn in roomNumeroBambini" value="{{rn.nu}}">
-                            {{rn.nu}}
-                        </md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-        </div>
+                        <div class="row nomarginLeftRigth">
+                            <div class="col-md-4">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Adulti</label>
+                                    <md-select ng-model="prenotazione.numAdulti">
+                                        <md-option ng-repeat="rn in roomNumberOccupant" value="{{rn.nu}}">
+                                            {{rn.nu}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
 
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-4">
-                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
-                    <label>Nome</label>
-                    <input ng-model="prenotazione.nome">
-                </md-input-container>
-            </div>
+                            <div class="col-md-4">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Bambini</label>
+                                    <md-select ng-model="prenotazione.numBambini">
+                                        <md-option ng-repeat="rn in roomNumeroBambini" value="{{rn.nu}}">
+                                            {{rn.nu}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
 
-            <div class="col-md-4">
-                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
-                    <label>Cognome</label>
-                    <input ng-model="prenotazione.cognome">
-                </md-input-container>
-            </div>
-        </div>
+                        <div class="row nomarginLeftRigth">
+                            <div class="col-md-4">
+                                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
+                                    <label>Nome</label>
+                                    <input ng-model="prenotazione.nome">
+                                </md-input-container>
+                            </div>
 
-        <div class="row nomarginLeftRigth">
-            <div class="col-md-4 noPaddingLeft">
-                <md-input-container>
-                    <label>Dal</label>
-                    <md-datepicker ng-model="prenotazione.startDate"></md-datepicker>
-                </md-input-container>
-            </div>
+                            <div class="col-md-4">
+                                <md-input-container class="md-block nomarginBottom" flex-gt-sm>
+                                    <label>Cognome</label>
+                                    <input ng-model="prenotazione.cognome">
+                                </md-input-container>
+                            </div>
+                        </div>
 
-            <div class="col-md-4 noPaddingLeft">
-                <md-input-container>
-                    <label>Al</label>
-                    <md-datepicker ng-model="prenotazione.endDate"></md-datepicker>
-                </md-input-container>
-            </div>
-        </div>
+                        <div class="row nomarginLeftRigth">
+                            <div class="col-md-4 noPaddingLeft">
+                                <md-input-container>
+                                    <label>Dal</label>
+                                    <md-datepicker ng-model="prenotazione.startDate"></md-datepicker>
+                                </md-input-container>
+                            </div>
 
-        <div class="row nomarginLeftRigth">
-            <div class=" col-md-2 col-md-offset-6  noPaddingLeft">
-                <md-button ng-click="showSimpleToast()" class="md-raised md-primary pull-right">Inserisci</md-button>
-            </div>
-        </div>
+                            <div class="col-md-4 noPaddingLeft">
+                                <md-input-container>
+                                    <label>Al</label>
+                                    <md-datepicker ng-model="prenotazione.endDate"></md-datepicker>
+                                </md-input-container>
+                            </div>
+                        </div>
+
+                        <div class="row nomarginLeftRigth">
+                            <div class=" col-md-2 col-md-offset-6  noPaddingLeft">
+                                <!--           <md-button ng-click="showSimpleToast()" class="md-raised md-primary pull-right">Inserisci</md-button>-->
+
+                                <md-button class="md-primary md-raised" ng-click="showConfirm($event)">
+                                    Inserisci
+                                </md-button>
+                            </div>
+                        </div>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Lista prenotazioni">
+                    <md-content class="md-padding whiteBck">
+                        <div class="row headerTable">
+                            <div class="col-md-1">Camere</div>
+                            <div class="col-md-1">Adulti</div>
+                            <div class="col-md-1">Bambini</div>
+                            <div class="col-md-2">Nome</div>
+                            <div class="col-md-2">Cognome</div>
+                            <div class="col-md-2">Da</div>
+                            <div class="col-md-2">A</div>
+                        </div>
+                        <div class="row marginTop10"  ng-repeat="item in lstPrenotazioni" >
+                            <div class="col-md-1">{{ item.numCamere }}</div>
+                            <div class="col-md-1">{{ item.numAdulti }}</div>
+                            <div class="col-md-1">{{ item.numBambini }}</div>
+                            <div class="col-md-2">{{ item.nome }}</div>
+                            <div class="col-md-2">{{ item.cognome }}</div>
+                            <div class="col-md-2">{{ item.startDate |date:'dd-MM-yyyy'}}</div>
+                            <div class="col-md-2">{{ item.startDate |date:'dd-MM-yyyy'}}</div>
+                           <!-- <md-list-item class="md-3-line" ng-repeat="item in lstPrenotazioni" ng-click="null">
+                                <div class="md-list-item-text" layout="row"><p>{{ item.numCamere }}</p></div>
+                                <div class="md-list-item-text" layout="column"><p>{{ item.numAdulti }}</p></div>
+                                <div class="md-list-item-text" layout="column"><p>{{ item.numBambini }}</p></div>
+                                <div class="md-list-item-text" layout="row"><p>{{ item.nome }}</p></div>
+                                <div class="md-list-item-text" layout="row"><p>{{ item.cognome }}</p></div>
+                                <div class="md-list-item-text" layout="row"><p>{{ item.startDate }}</p></div>
+                                <div class="md-list-item-text" layout="row"><p>{{ item.startDate }}</p></div>
+
+
+
+                            </md-list-item>-->
+                        </div>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-content>
     </div>
 </div>
